@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS public.member_info
+(
+    idx bigint NOT NULL DEFAULT nextval('member_idx_seq'::regclass),
+    user_id character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    user_pwd character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    user_name character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    user_code character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    user_number character varying(20) COLLATE pg_catalog."default",
+    user_type boolean NOT NULL Default false
+    device_id character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    nursery boolean NOT NULL DEFAULT false,
+    CONSTRAINT member_pkey PRIMARY KEY (idx)
+)
